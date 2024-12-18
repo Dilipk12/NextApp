@@ -3,9 +3,9 @@ import Link from "next/link";
 function Footer() {
   return (
     <>
-      <div className="footersvg flex justify-between flex-wrap gap-8  text-blue p-5 px-16 py-24 sm:pb-[190px]">
+      <div className="footersvg bg-[#00607d] dark:bg-[#002a37] flex justify-between flex-wrap gap-8  text-blue p-5 sm:px-16 py-24 sm:pb-[190px]">
         <div className="flex flex-col gap-5">
-          <h1 className=" text-2xl sm:text-4xl text-white font-semibold w-[200px] sm:w-[500px]">
+          <h1 className=" text-2xl sm:text-4xl text-white font-semibold sm:w-[500px]">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
             sunt veritatis.
           </h1>
@@ -114,8 +114,8 @@ function Footer() {
         </div>
       </div>
 
-      <hr className=" border-blue-500" />
-      <div className="text-center bg-[#00303f] py-8">
+      <hr className=" border-blue-500 dark:border-black" />
+      <div className="text-center bg-[#00303f] dark:bg-gray-950 py-8">
         <p className="text-sm text-gray-300">©Copyright 2024</p>
       </div>
     </>

@@ -2,13 +2,14 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 // import { CarouselSize } from "./resources/CarouselSize";
-import DoctorImg from "@/app/images/doctor.png"
+import DoctorImg from "@/app/images/doctor.png";
 
 export default function Home() {
+
   return (
     <>
       <main className="flex flex-col items-center">
-        <section className=" footersvg w-full">
+        <section className="footersvg bg-[#00607d] dark:bg-[#002a37] w-full">
           <div className="py-10 sm:py-16 lg:py-24">
             <div className="px-5 mx-auto max-w-7xl sm:px-6 lg:px-8">
               <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
@@ -46,23 +47,14 @@ export default function Home() {
                 </div>
 
                 <div>
-                <Image 
-            src={DoctorImg}
-            className="w-full"
-            alt="Logo"
-             />
-                  {/* <img
-                    className="w-full"
-                    src="https://cdn.rareblocks.xyz/collection/celebration/images/hero/1/hero-img.png"
-                    alt=""
-                  /> */}
+                  <Image src={DoctorImg} className="w-full" alt="Logo" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-slate-100 mt-10 z-10 sm:-mt-10 w-[70%] rounded-2xl shadow-xl sm:shadow-2xl px-5 py-6 grid grid-cols-1 gap-8 text-center sm:gap-x-8 md:grid-cols-3">
+        <section className="bg-slate-100 dark:bg-gray-200 mt-10 mb-12 sm:mb-0 z-10 sm:-mt-10 w-[70%] rounded-2xl shadow-xl sm:shadow-2xl px-5 py-6 grid grid-cols-1 gap-8 text-center sm:gap-x-8 md:grid-cols-3">
           <div>
             <h3 className="font-bold text-5xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-700">
@@ -98,13 +90,13 @@ export default function Home() {
         </section>
 
         {/* About Section  */}
-        <div className=" aboutsvg py-16 px-12 sm:py-24 sm:px-20 w-full flex-wrap md:flex-nowrap flex items-center justify-between gap-16 ">
+        <section className="w-full aboutsvg bg-[#FFFFFF] dark:bg-[#c3c3c3]">
+        <div className="mx-auto max-w-7xl py-16 sm:py-24 px-5 sm:px-6 lg:px-8 w-full flex-wrap md:flex-nowrap flex items-center justify-between gap-16 ">
           <div className=" flex flex-col gap-5 w-full lg:w-1/2">
-            <h1 className="text-4xl sm:5xl lg:text-6xl font-semibold">
-              Clrafting <br />
-              Healthy Smiles <br /> One Service at <br /> a Time
+            <h1 className="text-4xl text-black sm:5xl lg:text-6xl font-semibold">
+              Clrafting Healthy Smiles One Service at a Time
             </h1>
-            <p className="sm:w-[400px]">
+            <p className="sm:w-[400px] text-black">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
               saepe vero debitis laboriosam voluptates doloremque provident
               praesentium nostrum? Est fuga quas adipisci totam doloremque quo
@@ -112,7 +104,7 @@ export default function Home() {
             </p>
             <div>
               <Link href="/about">
-                <button className="border-2 border-black px-16 sm:px-20 py-3 sm:py-5 font-semibold text-sm hover:bg-black hover:text-white duration-300 text-black rounded-full">
+                <button className="border-2 border-black px-14 sm:px-20 py-3 sm:py-5 font-semibold text-sm hover:bg-black hover:text-white duration-300 text-black rounded-full">
                   About Clinic
                 </button>
               </Link>
@@ -125,90 +117,93 @@ export default function Home() {
             className="bg-cover bg-center bg-white rounded-2xl h-[350px] lg:h-[500px] w-full lg:w-1/2 "
           ></div>
         </div>
+        </section>
 
         {/* services section  */}
 
-        <div className="bg-[#007eff1f] w-full px-12 py-20 sm:px-20 sm:py-28 flex flex-col gap-16">
-          <div className="flex-wrap lg:flex-nowrap flex justify-between gap-5 ">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900">
-              Elevating Oral Health <br />
-              with Personalized <br />
-              Service
-            </h1>
-            <div className="lg:pl-56">
-              <p className="text-[11px] sm:text-[12px] text-sky-950 sm:w-[300px] sm:text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                saepe vero debitis laboriosam voluptates doloremque provident
-                praesentium nostrum? Est fuga quas adipisci totam doloremque
-                perspiciatis expedita, amet sint enim.
-              </p>
+        <section className="w-full bg-[#007eff1f]">
+          <div className=" mx-auto max-w-7xl py-20 sm:py-28 px-5 sm:px-6 lg:px-8 flex flex-col gap-16">
+            <div className="flex-wrap lg:flex-nowrap flex justify-between gap-5 ">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-slate-900 dark:text-white">
+                Elevating Oral Health <br />
+                with Personalized <br />
+                Service
+              </h1>
+              <div className="lg:pl-56">
+                <p className="text-[11px] sm:text-[12px] text-sky-950 dark:text-white sm:w-[300px] sm:text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                  saepe vero debitis laboriosam voluptates doloremque provident
+                  praesentium nostrum? Est fuga quas adipisci totam doloremque
+                  perspiciatis expedita, amet sint enim.
+                </p>
 
-              <Link href="/service">
-                <button className="border-[1px] border-sky-950 px-7 py-2 font-semibold text-[8px] bg-sky-950 hover:bg-white hover:text-sky-950 duration-300 text-white rounded-full mt-3">
-                  All Services
-                </button>
-              </Link>
+                <Link href="/service">
+                  <button className="border-[1px] border-sky-950 px-7 py-2 font-semibold text-[8px] bg-sky-950 dark:bg-white dark:text-sky-950 dark:hover:bg-gray-500 dark:hover:text-white hover:bg-white hover:text-sky-950 duration-300 text-white rounded-full mt-3">
+                    All Services
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-wrap px-6 lg:flex-nowrap items-center justify-center gap-5">
+              <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
+                <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
+                  General Dentistry Services
+                </h1>
+                <p className="text-[11px] sm:text-[16px]  text-slate-800">
+                  Preventive care, cleanings, fillings, extractions and
+                  diagnosis for overall oral health.
+                </p>
+                <Button
+                  size="lg"
+                  variant="link"
+                  className="font-semibold text-blue-600 text-left pl-0"
+                >
+                  Learn More
+                </Button>
+              </div>
+              <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
+                <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
+                  Cosmetic Dentistry Solutions
+                </h1>
+                <p className="text-[11px] sm:text-[16px]  text-slate-800">
+                  Smile makeovers with teeth whitening, veneers, bonding for
+                  enhancing your smile’s appearance.
+                </p>
+                <Button
+                  size="lg"
+                  variant="link"
+                  className="font-semibold text-blue-600 text-left pl-0"
+                >
+                  Learn More
+                </Button>
+              </div>
+              <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
+                <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
+                  Oral & Maxillofacial Surgery
+                </h1>
+                <p className="text-[11px] sm:text-[16px]  text-slate-800">
+                  Surgical treatments for impacted teeth, facial trauma, cysts,
+                  tumors and jaw issues.
+                </p>
+                <Button
+                  size="lg"
+                  variant="link"
+                  className="font-semibold text-blue-600 text-left pl-0"
+                >
+                  Learn More
+                </Button>
+              </div>
             </div>
           </div>
-          <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-5">
-            <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
-              <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
-                General Dentistry Services
-              </h1>
-              <p className="text-[11px] sm:text-[16px]  text-slate-800">
-                Preventive care, cleanings, fillings, extractions and diagnosis
-                for overall oral health.
-              </p>
-              <Button
-                size="lg"
-                variant="link"
-                className="font-semibold text-blue-600 text-left pl-0"
-              >
-                Learn More
-              </Button>
-            </div>
-            <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
-              <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
-                Cosmetic Dentistry Solutions
-              </h1>
-              <p className="text-[11px] sm:text-[16px]  text-slate-800">
-                Smile makeovers with teeth whitening, veneers, bonding for
-                enhancing your smile’s appearance.
-              </p>
-              <Button
-                size="lg"
-                variant="link"
-                className="font-semibold text-blue-600 text-left pl-0"
-              >
-                Learn More
-              </Button>
-            </div>
-            <div className="w-[400px] rounded-xl shadow-xl border-2 border-sky-900  bg-blue-100 p-5 text-center flex flex-col gap-2">
-              <h1 className=" text-2xl sm:text-3xl text-sky-950 font-semibold">
-                Oral & Maxillofacial Surgery
-              </h1>
-              <p className="text-[11px] sm:text-[16px]  text-slate-800">
-                Surgical treatments for impacted teeth, facial trauma, cysts,
-                tumors and jaw issues.
-              </p>
-              <Button
-                size="lg"
-                variant="link"
-                className="font-semibold text-blue-600 text-left pl-0"
-              >
-                Learn More
-              </Button>
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* review section  */}
-        <section className="dark:bg-gray-100 bg-white aboutsvg w-full dark:text-gray-800">
-          <div className="container px-6 py-12 mx-auto">
+        <section className=" bg-[#FFFFFF] dark:bg-[#c3c3c3] aboutsvg w-full dark:text-gray-800">
+          <div className="container px-5 py-12 mx-auto">
             <div className="grid items-center gap-4 xl:grid-cols-5">
               <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
                 <h2 className="text-3xl sm:text-5xl font-bold">
-                What our patients think of us
+                  What our patients think of us
                 </h2>
                 <p className="dark:text-gray-600">
                   Pri ex magna scaevola moderatius. Nullam accommodare no vix,
@@ -219,7 +214,7 @@ export default function Home() {
               <div className="p-6 xl:col-span-3">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="grid content-center gap-4 ">
-                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-50">
+                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-200">
                       <p>
                         An audire commodo habemus cum. Ne sed corrumpit
                         repudiandae. Tota aliquip democritum pro in, nec
@@ -242,7 +237,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-50">
+                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-200">
                       <p>
                         Sit wisi sapientem ut, pri civibus temporibus
                         voluptatibus et, ius cu hinc fabulas. Nam meliore
@@ -266,7 +261,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="grid content-center gap-4">
-                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-50">
+                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-200">
                       <p>
                         Putant omnium elaboraret per ut. Id dicta tritani
                         nominavi quo, mea id justo errem elaboraret. Agam mollis
@@ -289,7 +284,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-50">
+                    <div className="p-6 rounded shadow-md bg-sky-100 dark:bg-gray-200">
                       <p>
                         Te omnes virtute volutpat sed. Ei esse eros interesset
                         vel, ei populo denique ocurreret vix, eu cum pertinax
@@ -323,21 +318,21 @@ export default function Home() {
 
         {/* call to action section  */}
 
-        <section className="py-8 px-10 calltoaction dark:bg-gray-100 dark:text-gray-900 w-full">
+        <section className="py-8 px-10 calltoaction w-full">
           <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 md:px-24 xl:px-48">
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-slate-200 font-bold leading-none text-center">
-            Get Your Dental Health Checked—Schedule Now!
+              Get Your Dental Health Checked—Schedule Now!
             </h1>
             <p className="text-sm sm:text-lg lg:text-xl font-medium text-zinc-400 text-center">
-            Begin your journey to a brighter, healthier smile—book your tailored consultation with our skilled dental professionals today
+              Begin your journey to a brighter, healthier smile—book your
+              tailored consultation with our skilled dental professionals today
             </p>
             <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-8">
-            <Link href="/contact">
-              <button className="hover:bg-white bg-[#00607d] text-zinc-200 hover:text-black hover:border-black hover:border-2 border-2 border-black px-8 py-3 font-semibold text-sm rounded-full">
-                Book Appointment
-              </button>
-            </Link>
-             
+              <Link href="/contact">
+                <button className="hover:bg-white bg-[#00607d] text-zinc-200 hover:text-black hover:border-black hover:border-2 border-2 border-black px-8 py-3 font-semibold text-sm rounded-full">
+                  Book Appointment
+                </button>
+              </Link>
             </div>
           </div>
         </section>
